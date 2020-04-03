@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "locationtracker-255912": {
+      "hosting": {
+        "bootstrap-app": [
+          "locationtracker-255912"
+        ]
+      }
+    }
+  }
+}
