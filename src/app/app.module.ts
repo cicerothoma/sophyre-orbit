@@ -13,6 +13,10 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { AuthGuard } from './services/auth-guard.service';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [
     AuthGuard
