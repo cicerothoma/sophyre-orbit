@@ -16,7 +16,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     FontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    FormsModule
   ],
   providers: [
     AuthGuard
