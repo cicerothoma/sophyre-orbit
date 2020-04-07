@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,6 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  faUser = faUser;
+  faKey = faKey;
   user = {
     email: '',
     password: ''

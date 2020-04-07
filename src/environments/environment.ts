@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAV9nkC-IcFvmbkD1eNxXsuyn0g-MTmH4k",
-    authDomain: "locationtracker-255912.firebaseapp.com",
-    databaseURL: "https://locationtracker-255912.firebaseio.com",
-    projectId: "locationtracker-255912",
-    storageBucket: "locationtracker-255912.appspot.com",
-    messagingSenderId: "339626156244",
-    appId: "1:339626156244:web:15f9e7c93caf87177e5b41",
-    measurementId: "G-0ZCL0S2W6F"
+    apiKey: "AIzaSyD0qUv1r5f9HLsfEGEXHbtXMqg8MEv8FJ4",
+    authDomain: "sophyre-orbit.firebaseapp.com",
+    databaseURL: "https://sophyre-orbit.firebaseio.com",
+    projectId: "sophyre-orbit",
+    storageBucket: "sophyre-orbit.appspot.com",
+    messagingSenderId: "618915090212",
+    appId: "1:618915090212:web:baaab9195dfef3647badb1",
+    measurementId: "G-BTFEES7BNC"
   }
 };
 

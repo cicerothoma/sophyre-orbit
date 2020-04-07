@@ -1,5 +1,5 @@
-<div>
-    <form #loginForm="ngForm">
+<!-- <div class="container-fluid">
+    <form class="padding" #loginForm="ngForm">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" class="form-control" [(ngModel)]="user.email" id="email" name="email">
@@ -10,7 +10,44 @@
           <input type="text" class="form-control" [(ngModel)]="user.password" id="password" name="password">
         </div>
     
-        <button type="button" (click)="login()" class="btn btn-success">Submit</button>
+        <button type="button" (click)="login()" class="btn btn-primary">Submit</button>
     
     </form>
+</div> -->
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon></span>
+						</div>
+						<input type="text" class="form-control" placeholder="username">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><fa-icon [icon]="faKey"></fa-icon></span>
+						</div>
+						<input type="password" class="form-control" placeholder="password">
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a routerLink="/sign-up">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

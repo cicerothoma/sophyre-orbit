@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "bootstrap-app",
-      "public": "dist/bootstrap-app",
+      "target": "sophyre-orbit",
+      "public": "dist/sophyre-orbit",
       "ignore": [
         "firebase.json",
         "**/.*",

@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'sign-up', component: SignupComponent},
   {path: '**', redirectTo: '/404', pathMatch: 'full'}
 ];
 

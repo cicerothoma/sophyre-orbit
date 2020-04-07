@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsModule }   from '@angular/forms';
     FontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthGuard
