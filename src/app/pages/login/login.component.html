@@ -14,7 +14,7 @@
     
     </form>
 </div> -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
@@ -48,6 +48,47 @@
 					<a href="#">Forgot your password?</a>
 				</div>
 			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<div class="login100-form-title" style="background-image: url(../../../../../assets/img/bg-01.jpg);">
+				<span class="login100-form-title-1">
+					Sign In
+				</span>
+			</div>
+
+			<form [formGroup]="loginForm" class="login100-form validate-form">
+				<div class="wrap-input100 validate-input m-b-26">
+					<span class="label-input100">Email</span>
+					<input class="input100" formControlName="email" type="text" name="email" placeholder="Enter Email">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-18">
+					<span class="label-input100">Password</span>
+					<input class="input100" formControlName="password" type="password" name="pass" placeholder="Enter password">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="flex-sb-m w-full p-b-30">
+					
+					<div>
+						<a href="#" class="txt1">
+							Forgot Password?
+						</a>
+					</div>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button type="button" (click)="login()" class="login100-form-btn">
+						Login
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

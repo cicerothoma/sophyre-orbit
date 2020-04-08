@@ -6,16 +6,3 @@ html, body {
     margin: 0;
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-    .social a {
-        font-size: 4em;
-        padding: 2rem;
-    }
-}
-@media (max-width: 768px) {
-    .social a {
-        font-size: 2.5em;
-        padding: 1.2rem;
-    }
-}
