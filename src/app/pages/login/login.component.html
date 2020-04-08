@@ -10,15 +10,23 @@
 			<form [formGroup]="loginForm" class="login100-form validate-form">
 				<div class="wrap-input100 validate-input m-b-26">
 					<span class="label-input100">Email</span>
-					<input class="input100" formControlName="email" type="text" name="email" placeholder="Enter Email">
+					<input class="input100" formControlName="email" type="text" name="email" placeholder="Enter Email"
+					[class.invalid]="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched || submitAttempt)">
 					<span class="focus-input100"></span>
 				</div>
+					<p *ngIf="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched || submitAttempt)">
+						Email not entered or Vaild
+					</p>
 
 				<div class="wrap-input100 validate-input m-b-18">
 					<span class="label-input100">Password</span>
-					<input class="input100" formControlName="password" type="password" name="pass" placeholder="Enter password">
+					<input class="input100" formControlName="password" type="password" name="pass" placeholder="Enter password"
+					[class.invalid]="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || loginForm.controls.password.touched || submitAttempt)">
 					<span class="focus-input100"></span>
 				</div>
+				<p *ngIf="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || loginForm.controls.password.touched || submitAttempt)">
+					Password not entered or Vaild
+				</p>
 
 				<div class="flex-sb-m w-full p-b-30">
 					

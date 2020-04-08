@@ -1,3 +1,7 @@
+.invalid{
+    border: 2px solid red;
+}
+    
     a {
 
         font-size: 14px;
