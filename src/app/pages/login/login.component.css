@@ -1,5 +1,5 @@
     a {
-        font-family: Poppins-Regular;
+
         font-size: 14px;
         line-height: 1.7;
         color: #666666;
@@ -25,7 +25,6 @@
     }
     
     p {
-        font-family: Poppins-Regular;
         font-size: 14px;
         line-height: 1.7;
         color: #666666;
@@ -108,7 +107,6 @@
     /*//////////////////////////////////////////////////////////////////
     [ Utility ]*/
     .txt1 {
-      font-family: Poppins-Regular;
       font-size: 13px;
       line-height: 1.4;
       color: #999999;
@@ -169,7 +167,6 @@
     }
     
     .login100-form-title-1 {
-      font-family: Poppins-Bold;
       font-size: 30px;
       color: #fff;
       text-transform: uppercase;
@@ -216,8 +213,7 @@
     }
     
     .label-input100 {
-      font-family: Poppins-Regular;
-      font-size: 15px;
+        font-size: 15px;
       color: #808080;
       line-height: 1.2;
       text-align: right;
@@ -231,7 +227,6 @@
     
     /*---------------------------------------------*/
     .input100 {
-      font-family: Poppins-Regular;
       font-size: 15px;
       color: #555555;
       line-height: 1.2;
@@ -292,7 +287,6 @@
     }
     
     .label-checkbox100 {
-      font-family: Poppins-Regular;
       font-size: 13px;
       color: #999999;
       line-height: 1.4;
@@ -303,38 +297,7 @@
       cursor: pointer;
     }
     
-    .label-checkbox100::before {
-      content: "\f00c";
-      font-family: FontAwesome;
-      font-size: 13px;
-      color: transparent;
-    
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      border-radius: 2px;
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      left: 0;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-    
-    .input-checkbox100:checked + .label-checkbox100::before {
-      color: #57b846;
-    }
-    
+ 
     /*------------------------------------------------------------------
     [ Button ]*/
     .container-login100-form-btn {
@@ -361,7 +324,6 @@
       background-color: #57b846;
       border-radius: 25px;
     
-      font-family: Poppins-Regular;
       font-size: 16px;
       color: #fff;
       line-height: 1.2;
@@ -426,7 +388,6 @@
       right: 2px;
       pointer-events: none;
     
-      font-family: Poppins-Medium;
       color: #c80000;
       font-size: 13px;
       line-height: 1.4;
@@ -443,7 +404,6 @@
     
     .alert-validate::after {
       content: "\f06a";
-      font-family: FontAwesome;
       display: block;
       position: absolute;
       color: #c80000;
