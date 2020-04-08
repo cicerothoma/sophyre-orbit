@@ -16,7 +16,10 @@ export class AuthService {
 
   signUp(email, password) {
     this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then(() => console.log('Sign Up Success'))
+      .then((res) => {
+        console.log('Sign Up Success');
+        console.log(res.user.uid);
+      })
       .catch((err) => console.log(err));
   }
 }
