@@ -8,13 +8,15 @@ import { auth } from 'firebase/app';
 export class AuthService {
 
   constructor(private afAuth: AngularFireAuth) { }
-  login (email, password) {
+  login(email, password) {
     this.afAuth.signInWithEmailAndPassword(email, password)
       .then(() => console.log('Logged In', this.afAuth.user))
       .catch((err) => console.log(err));
   }
 
-  signUp (email, password) {
+  signUp(email, password) {
     this.afAuth.createUserWithEmailAndPassword(email, password)
+      .then(() => console.log('Sign Up Success'))
+      .catch((err) => console.log(err));
   }
 }

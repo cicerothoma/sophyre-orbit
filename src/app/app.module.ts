@@ -36,7 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     FormsModule,
     ReactiveFormsModule
   ],

@@ -9,7 +9,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'}, 
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: '404', component: PageNotFoundComponent},
   {path: 'gallery', component: GalleryComponent},

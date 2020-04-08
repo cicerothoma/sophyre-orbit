@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyD0qUv1r5f9HLsfEGEXHbtXMqg8MEv8FJ4",
-    authDomain: "sophyre-orbit.firebaseapp.com",
-    databaseURL: "https://sophyre-orbit.firebaseio.com",
-    projectId: "sophyre-orbit",
-    storageBucket: "sophyre-orbit.appspot.com",
-    messagingSenderId: "618915090212",
-    appId: "1:618915090212:web:baaab9195dfef3647badb1",
-    measurementId: "G-BTFEES7BNC"
+    apiKey: 'AIzaSyD0qUv1r5f9HLsfEGEXHbtXMqg8MEv8FJ4',
+    authDomain: 'sophyre-orbit.firebaseapp.com',
+    databaseURL: 'https://sophyre-orbit.firebaseio.com',
+    projectId: 'sophyre-orbit',
+    storageBucket: 'sophyre-orbit.appspot.com',
+    messagingSenderId: '618915090212',
+    appId: '1:618915090212:web:baaab9195dfef3647badb1',
+    measurementId: 'G-BTFEES7BNC'
   }
 };
 
