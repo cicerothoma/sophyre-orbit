@@ -17,22 +17,29 @@ export class LoginComponent {
 
   faUser = faUser;
   faKey = faKey;
-  
-  constructor(private auth: AuthService, 
-              private router: Router,
-              private fb: FormBuilder) { }
+  submitAttempt: boolean = false;
+
+  constructor(private auth: AuthService,
+    private router: Router,
+    private fb: FormBuilder) { }
 
   loginForm = this.fb.group({
     email: ['', Validators.compose([Validators.required, Validators.email])],
     password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
   })
 
-  
+
   login() {
-    const email = this.loginForm.get('email').value;
-    const password = this.loginForm.get('password').value;
-    this.auth.login(email, password)
-    this.router.navigate(['/admin']);
+    this.submitAttempt = true;
+    if (this.loginForm.valid) {
+      const email = this.loginForm.get('email').value;
+      const password = this.loginForm.get('password').value;
+      this.auth.login(email, password)
+      this.router.navigate(['/admin']);
+    } else {
+      alert('The Form is Invalid')
+    }
+
   }
 
 }
