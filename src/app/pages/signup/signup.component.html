@@ -36,36 +36,55 @@
                 <p>Email is Required Or Not Valid</p>
             </div>
             <div class="form-wrapper">
-                <select name="gender" formControlName="gender" id="gender" class="form-control">
+                <select name="gender" formControlName="gender" id="gender" class="form-control"
+                [class.invalid]="signUpForm.controls.gender.invalid && (submitAttempt || signUpForm.controls.gender.touched || signUpForm.controls.gender.dirty)">
                     <option value="" disabled selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
             </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.gender.invalid && (submitAttempt || signUpForm.controls.gender.touched || signUpForm.controls.gender.dirty)">
+                <p>Please select your gender</p>
+            </div>
             <div class="form-wrapper">
-                <select name="role" formControlName="role" id="role" class="form-control">
+                <select name="role" formControlName="role" id="role" class="form-control"
+                [class.invalid]="signUpForm.controls.role.invalid && (submitAttempt || signUpForm.controls.role.touched || signUpForm.controls.role.dirty)">
                     <option value="" disabled selected>Role</option>
                     <option value="admin">Administrator</option>
                     <option value="author">Author</option>
                     <option value="user">User</option>
                 </select>
-                <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+            </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.role.invalid && (submitAttempt || signUpForm.controls.role.touched || signUpForm.controls.role.dirty)">
+                <p>Please Select User Role</p>
             </div>
             <div class="form-wrapper">
-                <input type="password" formControlName="password" placeholder="Password" class="form-control">
-                <i class="zmdi zmdi-lock"></i>
+                <input type="password" formControlName="password" placeholder="Password" class="form-control"
+                [class.invalid]="signUpForm.controls.password.invalid && (submitAttempt || signUpForm.controls.password.touched || signUpForm.controls.password.dirty)">
+            </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.password.invalid && (submitAttempt || signUpForm.controls.password.touched || signUpForm.controls.password.dirty)">
+                <p *ngIf="signUpForm.controls.password.validator('minLength')">
+                    Password Must be More Than 6 Characters
+                </p>
+                <p>Password Is Required</p>
             </div>
             <div class="form-wrapper">
-                <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class="form-control">
-                <i class="zmdi zmdi-lock"></i>
+                <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class="form-control"
+                [class.invalid]="signUpForm.controls.confirmPassword.invalid && (submitAttempt || signUpForm.controls.confirmPassword.touched || signUpForm.controls.confirmPassword.dirty)">
+            </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.confirmPassword.invalid && (submitAttempt || signUpForm.controls.confirmPassword.touched || signUpForm.controls.confirmPassword.dirty)">
+                <p *ngIf="signUpForm.controls.password.value != signUpForm.controls.confirmPassword.value">
+                    Password and Confirm Password field must match
+                </p>
+                <p>Confirm Password Field is Required</p>
             </div>
             <button (click)="signUp()">Register
                 <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </form>
-        <div>
+        <!-- <div>
             <p>Form Status: {{signUpForm.status}}</p>
-        </div>
+        </div> -->
     </div>
 </div>
