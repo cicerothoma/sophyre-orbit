@@ -20,12 +20,20 @@
                 </p>
             </div>
             <div class="form-wrapper">
-                <input type="text"  formControlName="username" placeholder="Username" class="form-control">
-                <i class="zmdi zmdi-account"></i>
+                <input type="text"  formControlName="username" placeholder="Username" class="form-control"
+                [class.invalid]="signUpForm.controls.username.invalid && (submitAttempt || signUpForm.controls.username.touched || signUpForm.controls.username.dirty)">
+            </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.username.invalid && (submitAttempt || signUpForm.controls.username.touched || signUpForm.controls.username.dirty)">
+                <p>
+                    Username is Required
+                </p>
             </div>
             <div class="form-wrapper">
-                <input type="text"  formControlName="email" placeholder="Email Address" class="form-control">
-                <i class="zmdi zmdi-email"></i>
+                <input type="text"  formControlName="email" placeholder="Email Address" class="form-control"
+                [class.invalid]="signUpForm.controls.email.invalid && (submitAttempt || signUpForm.controls.email.touched || signUpForm.controls.email.dirty)">
+            </div>
+            <div class="remove-margin" *ngIf="signUpForm.controls.email.invalid && (submitAttempt || signUpForm.controls.email.touched || signUpForm.controls.email.dirty)">
+                <p>Email is Required Or Not Valid</p>
             </div>
             <div class="form-wrapper">
                 <select name="gender" formControlName="gender" id="gender" class="form-control">
@@ -34,7 +42,6 @@
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
             </div>
             <div class="form-wrapper">
                 <select name="role" formControlName="role" id="role" class="form-control">
