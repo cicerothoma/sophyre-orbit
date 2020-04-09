@@ -1,8 +1,13 @@
-.invalid {
-  border: 2px solid red;
+input.invalid {
+  border: 3px solid red;
   border-top: none;
   border-bottom: none;
   border-right: none;
+}
+.remove-margin {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
 }
 input, textarea, select, button {
     color: #333;

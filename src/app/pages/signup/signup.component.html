@@ -8,11 +8,15 @@
             <div class="form-group">
                 <input type="text"  formControlName="firstName" placeholder="First Name" class="form-control"
                 [class.invalid]="signUpForm.controls.firstName.invalid && (submitAttempt || signUpForm.controls.firstName.touched || signUpForm.controls.firstName.dirty)">
-                <input type="text"  formControlName="lastName" placeholder="Last Name" class="form-control">
+                <input type="text"  formControlName="lastName" placeholder="Last Name" class="form-control"
+                [class.invalid]="signUpForm.controls.lastName.invalid && (submitAttempt || signUpForm.controls.lastName.touched || signUpForm.controls.lastName.dirty)">
             </div>
-            <div>
-                <p *ngIf="signUpForm.controls.firstName.invalid && (submitAttempt || signUpForm.controls.firstName.touched || signUpForm.controls.firstName.dirty)">
+            <div class="remove-margin">
+                <p *ngIf="!signUpForm.controls.firstName.valid && (submitAttempt || signUpForm.controls.firstName.touched || signUpForm.controls.firstName.dirty)">
                     First Name is Required
+                </p>
+                <p *ngIf="signUpForm.controls.lastName.invalid && (submitAttempt || signUpForm.controls.lastName.touched || signUpForm.controls.lastName.dirty)">
+                    Last name is Required
                 </p>
             </div>
             <div class="form-wrapper">
