@@ -31,8 +31,6 @@ export class LoginComponent {
 
   login() {
     this.submitAttempt = true;
-    console.log(this.loginForm.controls.email.value, this.loginForm.controls.email.valid)
-    console.log(this.loginForm.controls.password.value, this.loginForm.controls.password.valid)
     if (this.loginForm.valid) {
       const email = this.loginForm.get('email').value;
       const password = this.loginForm.get('password').value;

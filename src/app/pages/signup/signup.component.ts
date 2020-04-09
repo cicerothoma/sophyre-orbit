@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  submitAttempt: boolean = false;
 
   constructor(private fb: FormBuilder,
               private afs: AngularFirestore,
@@ -23,7 +24,7 @@ export class SignupComponent implements OnInit {
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
     username: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', Validators.compose([Validators.required, Validators.email])],
     gender: ['', Validators.required],
     role: ['', Validators.required],
     password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
@@ -35,7 +36,9 @@ export class SignupComponent implements OnInit {
 
 
   signUp() {
-    const email: string = this.signUpForm.get('email').value;
+    this.submitAttempt = true;
+    if (this.signUpForm.valid) {
+      const email: string = this.signUpForm.get('email').value;
     const password: string = this.signUpForm.get('password').value;
     console.log(email, password);
     this.afAuth.createUserWithEmailAndPassword(email, password)
@@ -46,7 +49,11 @@ export class SignupComponent implements OnInit {
         this.userCollection.doc(res.user.uid).set(this.signUpForm.value);
         this.router.navigate(['/login']);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+    } else {
+      alert('The Form Is Not Valid')
+    }
+    
   }
 
 }
