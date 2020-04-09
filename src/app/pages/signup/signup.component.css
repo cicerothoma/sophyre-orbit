@@ -1,5 +1,10 @@
+.invalid {
+  border: 2px solid red;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
 input, textarea, select, button {
-    font-family: "Poppins-Regular";
     color: #333;
     font-size: 13px; }
   
@@ -42,7 +47,6 @@ input, textarea, select, button {
     .inner h3 {
       text-transform: uppercase;
       font-size: 25px;
-      font-family: "Poppins-SemiBold";
       text-align: center;
       margin-bottom: 28px; }
   
@@ -71,21 +75,16 @@ input, textarea, select, button {
     padding: 0;
     margin-bottom: 25px; }
     .form-control::-webkit-input-placeholder {
-      font-size: 13px;
-      color: #333;
-      font-family: "Poppins-Regular"; }
+      font-size: 13px; }
     .form-control::-moz-placeholder {
       font-size: 13px;
-      color: #333;
-      font-family: "Poppins-Regular"; }
+      color: #333; }
     .form-control:-ms-input-placeholder {
       font-size: 13px;
-      color: #333;
-      font-family: "Poppins-Regular"; }
+      color: #333; }
     .form-control:-moz-placeholder {
       font-size: 13px;
-      color: #333;
-      font-family: "Poppins-Regular"; }
+      color: #333; }
   
   select {
     -moz-appearance: none;

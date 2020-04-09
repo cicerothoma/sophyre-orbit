@@ -6,8 +6,14 @@
         <form [formGroup]="signUpForm">
             <h3>Registration Form</h3>
             <div class="form-group">
-                <input type="text"  formControlName="firstName" placeholder="First Name" class="form-control">
+                <input type="text"  formControlName="firstName" placeholder="First Name" class="form-control"
+                [class.invalid]="signUpForm.controls.firstName.invalid && (submitAttempt || signUpForm.controls.firstName.touched || signUpForm.controls.firstName.dirty)">
                 <input type="text"  formControlName="lastName" placeholder="Last Name" class="form-control">
+            </div>
+            <div>
+                <p *ngIf="signUpForm.controls.firstName.invalid && (submitAttempt || signUpForm.controls.firstName.touched || signUpForm.controls.firstName.dirty)">
+                    First Name is Required
+                </p>
             </div>
             <div class="form-wrapper">
                 <input type="text"  formControlName="username" placeholder="Username" class="form-control">
