@@ -16,6 +16,7 @@ select.invalid {
   margin-bottom: 1em;
   color: red;
   font-size: 12px;
+  font-style: italic;
 }
 input, textarea, select, button {
     color: #333;

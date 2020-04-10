@@ -1,5 +1,12 @@
 .invalid{
     border: 2px solid red;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+.error-message {
+  color: red;
+  font-style: italic;
 }
     
     a {

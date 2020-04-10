@@ -14,7 +14,7 @@
 					[class.invalid]="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched || submitAttempt)">
 					<span class="focus-input100"></span>
 				</div>
-					<p *ngIf="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched || submitAttempt)">
+					<p class="error-message" *ngIf="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched || submitAttempt)">
 						Email not entered or Vaild
 					</p>
 
@@ -24,7 +24,7 @@
 					[class.invalid]="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || loginForm.controls.password.touched || submitAttempt)">
 					<span class="focus-input100"></span>
 				</div>
-				<p *ngIf="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || loginForm.controls.password.touched || submitAttempt)">
+				<p class="error-message" *ngIf="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || loginForm.controls.password.touched || submitAttempt)">
 					Password not entered or Vaild
 				</p>
 
