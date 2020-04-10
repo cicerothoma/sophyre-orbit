@@ -53,7 +53,6 @@
                     <option value="" disabled selected>Role</option>
                     <option value="admin">Administrator</option>
                     <option value="author">Author</option>
-                    <option value="user">User</option>
                 </select>
             </div>
             <div class="remove-margin" *ngIf="signUpForm.controls.role.invalid && (submitAttempt || signUpForm.controls.role.touched || signUpForm.controls.role.dirty)">
@@ -64,7 +63,7 @@
                 [class.invalid]="signUpForm.controls.password.invalid && (submitAttempt || signUpForm.controls.password.touched || signUpForm.controls.password.dirty)">
             </div>
             <div class="remove-margin" *ngIf="signUpForm.controls.password.invalid && (submitAttempt || signUpForm.controls.password.touched || signUpForm.controls.password.dirty)">
-                <p *ngIf="signUpForm.controls.password.validator('minLength')">
+                <p *ngIf="signUpForm.controls.password.value">
                     Password Must be More Than 6 Characters
                 </p>
                 <p>Password Is Required</p>
