@@ -6,6 +6,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '404', component: PageNotFoundComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignupComponent},
   {path: '**', redirectTo: '/404', pathMatch: 'full'}

@@ -6,11 +6,14 @@ import { auth } from 'firebase/app';
   providedIn: 'root'
 })
 export class AuthService {
+  user = null;
 
   constructor(private afAuth: AngularFireAuth) { }
   login(email, password) {
     this.afAuth.signInWithEmailAndPassword(email, password)
-      .then(() => console.log('Logged In'))
+      .then((user) => {
+        this.user = user;
+      })
       .catch((err) => console.log(err));
   }
 
@@ -21,5 +24,9 @@ export class AuthService {
         console.log(res.user.uid);
       })
       .catch((err) => console.log(err));
+  }
+
+  logout() {
+    this.afAuth.signOut();
   }
 }

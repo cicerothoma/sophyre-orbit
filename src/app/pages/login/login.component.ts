@@ -37,7 +37,7 @@ export class LoginComponent {
       this.auth.login(email, password)
       this.router.navigate(['/admin']);
     } else {
-      alert('The Form is Invalid')
+      alert('Email and/Or Password Incorrect')
     }
 
   }
