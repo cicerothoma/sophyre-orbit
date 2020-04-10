@@ -8,6 +8,7 @@
 			</div>
 
 			<form [formGroup]="loginForm" class="login100-form validate-form">
+				<p class="error-message text-warning">Login Button Will Appear When The Form Is Valid</p>
 				<div class="wrap-input100 validate-input m-b-26">
 					<span class="label-input100">Email</span>
 					<input class="input100" formControlName="email" type="text" name="email" placeholder="Enter Email"
@@ -37,15 +38,13 @@
 					</div>
 				</div>
 
-				<ng-template #displayText>
-					<div class="btn btn-success">
-						<button type="button" (click)="login()" [disabled]="loginForm.invalid">
+					<div *ngIf="loginForm.valid" class="btn btn-success">
+						<button type="button" (click)="login()">
 							Login
 						</button>
 					</div>
-				</ng-template>
-				
-				<div *ngIf="submitAttempt; else displayText" class="spinner-grow text-success" role="status">
+			
+				<div *ngIf="submitAttempt" class="spinner-grow text-success" role="status">
 					<span class="sr-only">Loading...</span>
 				  </div>
 			</form>
