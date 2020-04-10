@@ -19,6 +19,8 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UploadComponent } from './pages/upload/upload.component';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     AdminComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UploadComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
