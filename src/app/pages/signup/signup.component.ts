@@ -39,17 +39,18 @@ export class SignupComponent implements OnInit {
     this.submitAttempt = true;
     if (this.signUpForm.valid) {
       const email: string = this.signUpForm.get('email').value;
-    const password: string = this.signUpForm.get('password').value;
-    console.log(email, password);
-    this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then((res) => {
-        console.log(res);
-        this.signUpForm.get('id').patchValue(res.user.uid);
-        console.log(this.signUpForm.value);
-        this.userCollection.doc(res.user.uid).set(this.signUpForm.value);
-        this.router.navigate(['/login']);
-      })
-      .catch((err) => console.log(err))
+      const password: string = this.signUpForm.get('password').value;
+      console.log(email, password);
+      this.afAuth.createUserWithEmailAndPassword(email, password)
+        .then((res) => {
+          this.signUpForm.get('id').patchValue(res.user.uid);
+          this.userCollection.doc(res.user.uid).set(this.signUpForm.value);
+          this.router.navigate(['/login']);
+        })
+        .catch((err) => {
+          alert(err);
+          this.submitAttempt = false;
+        })
     } else {
       alert('The Form Is Not Valid')
     }
