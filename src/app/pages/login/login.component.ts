@@ -35,7 +35,6 @@ export class LoginComponent {
       const email = this.loginForm.get('email').value;
       const password = this.loginForm.get('password').value;
       this.auth.login(email, password)
-      this.submitAttempt = false;
     } else {
       alert('Email and/Or Password Incorrect')
       this.submitAttempt = false;

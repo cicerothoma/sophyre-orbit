@@ -3,8 +3,7 @@
         <a routerLink="home" class="navbar-brand">
             Sophyre's Orbit
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        (click)="checkloginStatus()">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -24,7 +23,7 @@
                 <li class="nav-item">
                     <a href="" class="nav-link">About</a>
                 </li>
-                <div *ngIf="isLoggedIn" class="dropdown">
+                <div *ngIf="route.url == '/admin'" class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Dropdown button
                     </button>
