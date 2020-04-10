@@ -17,17 +17,8 @@ export class NavbarComponent {
       this.isLoggedIn = true;
     }
   }
-  displayDropdown() {
-    return this.isLoggedIn = true;
-  }
 
-  checkloginStatus() {
-    if (this.route.url == '/admin') {
-      this.displayDropdown();
-    } else {
-      this.isLoggedIn = false;
-    }
-  }
+
 
   logout(): void{
     this.auth.logout();
