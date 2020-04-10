@@ -37,12 +37,19 @@
 					</div>
 				</div>
 
-				<div class="container-login100-form-btn">
-					<button type="button" (click)="login()" class="login100-form-btn">
-						Login
-					</button>
-				</div>
+				<ng-template #displayText>
+					<div class="btn btn-success">
+						<button type="button" (click)="login()" [disabled]="loginForm.invalid">
+							Login
+						</button>
+					</div>
+				</ng-template>
+				
+				<div *ngIf="submitAttempt; else displayText" class="spinner-grow text-success" role="status">
+					<span class="sr-only">Loading...</span>
+				  </div>
 			</form>
 		</div>
 	</div>
 </div>
+

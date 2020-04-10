@@ -35,10 +35,9 @@ export class LoginComponent {
       const email = this.loginForm.get('email').value;
       const password = this.loginForm.get('password').value;
       this.auth.login(email, password)
-      console.log('Logged In')
-      this.router.navigate(['/admin']);
     } else {
       alert('Email and/Or Password Incorrect')
+      this.submitAttempt = false;
     }
 
   }

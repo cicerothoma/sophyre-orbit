@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,12 @@ import { auth } from 'firebase/app';
 export class AuthService {
   user = null;
 
-  constructor(private afAuth: AngularFireAuth) { }
+  constructor(private afAuth: AngularFireAuth, private router: Router) { }
   login(email, password) {
     this.afAuth.signInWithEmailAndPassword(email, password)
       .then((user) => {
         this.user = user;
+        this.router.navigate(['/admin'])
       })
       .catch((err) => console.log(err));
   }
