@@ -12,7 +12,7 @@ export class NavbarComponent {
   isAdmin: boolean = false;
   isLoggedIn: boolean = false;
 
-  constructor(private auth: AuthService, private route: Router) { 
+  constructor(private auth: AuthService, public route: Router) { 
     if (this.auth.user) {
       this.isLoggedIn = true;
     }
