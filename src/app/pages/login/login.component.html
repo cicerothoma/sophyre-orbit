@@ -8,7 +8,9 @@
 			</div>
 
 			<form [formGroup]="loginForm" class="login100-form validate-form">
-				<p class="error-message text-warning">Login Button Will Appear When The Form Is Valid</p>
+				<p class="error-message text-warning" *ngIf="!loginForm.valid">
+					Login Button Will Appear When The Form Is Valid
+				</p>
 				<div class="wrap-input100 validate-input m-b-26">
 					<span class="label-input100">Email</span>
 					<input class="input100" formControlName="email" type="text" name="email" placeholder="Enter Email"

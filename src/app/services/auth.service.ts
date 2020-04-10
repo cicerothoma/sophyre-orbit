@@ -16,7 +16,7 @@ export class AuthService {
         this.user = user;
         this.router.navigate(['/admin'])
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   }
 
   signUp(email, password) {
@@ -30,5 +30,6 @@ export class AuthService {
 
   logout() {
     this.afAuth.signOut();
+    this.router.navigate(['/login'])
   }
 }

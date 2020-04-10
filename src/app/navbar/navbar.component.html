@@ -3,7 +3,8 @@
         <a routerLink="home" class="navbar-brand">
             Sophyre's Orbit
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        (click)="checkloginStatus()">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -23,14 +24,14 @@
                 <li class="nav-item">
                     <a href="" class="nav-link">About</a>
                 </li>
-                <div *ngIf="isAdmin" class="dropdown">
+                <div *ngIf="isLoggedIn" class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Dropdown button
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Action</a>
                       <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" (click)="logout()">Logout</a>
                     </div>
                   </div>
             </ul>
