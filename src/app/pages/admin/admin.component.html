@@ -1,45 +1,24 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Add Image To Gallery</h5>
-              <p class="card-text">Add more unique styles and design to your personal gallery</p>
-              <a routerLink="/admin/upload" class="btn btn-success">Upload Image</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+  <div class="card text-center bg-secondary border-dark">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="/admin/upload" routerLinkActive="active">Upload</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="/admin/users" routerLinkActive="active">Users</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" >Disabled</a>
+        </li> -->
+      </ul>
+    </div>
+    <div class="card-body text-light">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-<router-outlet></router-outlet>
+
 
 
   
