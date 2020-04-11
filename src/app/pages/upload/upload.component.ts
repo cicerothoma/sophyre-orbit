@@ -25,7 +25,7 @@ export class UploadComponent implements OnInit {
     upload(event) {
       const randomId = Math.random().toString(36).substring(2);
       const file = event.target.files[0];
-      const filePath = `gallery/`;
+      const filePath = `gallery/${randomId}`;
       const fileRef = this.afStorage.ref(filePath)
       const task = this.afStorage.upload(filePath, file);
 
@@ -35,7 +35,9 @@ export class UploadComponent implements OnInit {
     task.snapshotChanges().pipe(
         finalize(() => {
           this.downloadURL = fileRef.getDownloadURL();
-          this.afs.collection('gallery').add(this.downloadURL)
+          this.downloadURL.subscribe((url) => {
+            this.afs.collection('gallery').add({imageUrl: url})
+          })
          } )
      )
     .subscribe()
