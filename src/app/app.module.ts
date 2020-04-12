@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UploadComponent } from './pages/upload/upload.component';
 import { UsersComponent } from './pages/users/users.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UsersComponent } from './pages/users/users.component';
     LoginComponent,
     SignupComponent,
     UploadComponent,
-    UsersComponent
+    UsersComponent,
+    EditUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
