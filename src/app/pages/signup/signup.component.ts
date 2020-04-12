@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
         .then((res) => {
           this.signUpForm.get('id').patchValue(res.user.uid);
           this.userCollection.doc(res.user.uid).set(this.signUpForm.value);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/admin/users']);
         })
         .catch((err) => {
           alert(err);
