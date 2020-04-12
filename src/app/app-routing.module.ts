@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '404', component: PageNotFoundComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'admin', component: AdminComponent, canActivateChild: [AuthGuard], children: [
+  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard], canActivateChild: [AuthGuard], children: [
     {path: 'users', component: UsersComponent},
     {path: 'upload', component: UploadComponent}
   ]},
