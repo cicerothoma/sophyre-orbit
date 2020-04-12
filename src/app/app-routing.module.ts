@@ -9,6 +9,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { UsersComponent } from './pages/users/users.component';
 import { UploadComponent } from './pages/upload/upload.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'admin', component: AdminComponent, canActivate:[AuthGuard], canActivateChild: [AuthGuard], children: [
     {path: 'users', component: UsersComponent},
+    {path: 'users/:id', component: UserDetailsComponent},
     {path: 'upload', component: UploadComponent},
     {path: 'sign-up', component: SignupComponent},
   ]},
