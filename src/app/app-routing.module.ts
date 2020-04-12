@@ -14,14 +14,14 @@ import { UploadComponent } from './pages/upload/upload.component';
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
   {path: '404', component: PageNotFoundComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'admin', component: AdminComponent, canActivate:[AuthGuard], canActivateChild: [AuthGuard], children: [
     {path: 'users', component: UsersComponent},
-    {path: 'upload', component: UploadComponent}
+    {path: 'upload', component: UploadComponent},
+    {path: 'sign-up', component: SignupComponent},
   ]},
-  {path: 'login', component: LoginComponent},
-  {path: 'sign-up', component: SignupComponent},
   {path: '**', redirectTo: '/404', pathMatch: 'full'}
 ];
 

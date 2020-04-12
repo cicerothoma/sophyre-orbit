@@ -46,7 +46,7 @@ export class UserService {
  return this.usersCollection.add(user);
  }
 
-  removeReport(id) {
+  removeUser(id) {
     return this.usersCollection.doc(id).delete();
   }
 
