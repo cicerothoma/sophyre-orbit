@@ -13,44 +13,34 @@
 <div class="wrapper" style="background-image: url('../../../assets/img/bg-registration-form-1.jpg');">
   <div class="inner">
       <div class="image-holder">
-          <img src="../../../assets/img/judeus-samson.jpg" alt="">
+          <img src="../../../assets/img/obi-onyeador.jpg" alt="">
       </div>
-      <form>
-          <h3>Registration Form</h3>
+      <form [formGroup]="uploadItem">
+          <h3>Upload Item</h3>
           <div class="form-group">
-              <input type="text"  formControlName="firstName" placeholder="First Name" class="form-control">
-              <input type="text"  formControlName="lastName" placeholder="Last Name" class="form-control">
-          </div>
+              <input type="text"  formControlName="itemName" placeholder="Item Name" class="form-control">
+          </div> 
           <div class="form-wrapper">
-              <input type="text"  formControlName="username" placeholder="Username" class="form-control">
-          </div>
-          <div class="form-wrapper">
-              <input type="text"  formControlName="email" placeholder="Email Address" class="form-control">
-          </div>
-          <div class="form-wrapper">
-              <select name="gender" formControlName="gender" id="gender" class="form-control">
-                  <option value="" disabled selected>Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+              <select name="category" formControlName="category" id="category" class="form-control">
+                  <option value="" disabled selected>Category</option>
+                  <option value="gown">Gown</option>
+                  <option value="native">Native</option>
                   <option value="other">Other</option>
               </select>
           </div>
           <div class="form-wrapper">
-              <select name="role" formControlName="role" id="role" class="form-control">
-                  <option value="" disabled selected>Role</option>
-                  <option value="admin">Administrator</option>
-                  <option value="author">Author</option>
-              </select>
+              <input type="number"  formControlName="price" placeholder="Item Price" class="form-control">
           </div>
+
+         <div class="form-wrapper">
+              <input type="text" name="description" placeholder="Description" formControlName="description" class="form-control">
+          </div>
+          
           <div class="form-wrapper">
-              <input type="password" formControlName="password" placeholder="Password" class="form-control">
+              <input type="file" (change)="upload($event)" formControlName="file" class="form-control">
+              <progress max="100" [value]="(uploadPercent | async)"></progress>
           </div>
-          <div class="form-wrapper">
-              <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class="form-control">
-          </div>
-          <button>Register
-              <i class="zmdi zmdi-arrow-right"></i>
-          </button>
+          <button type="button" (click)="submitForm()">Upload</button>
       </form>
   </div>
 </div>

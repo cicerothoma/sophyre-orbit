@@ -27,9 +27,10 @@ export class UploadComponent implements OnInit {
     this.uploadItem = this.fb.group({
       itemName: ['', Validators.required],
       category: ['', Validators.required],
+      description: ['', Validators.required],
       price: ['', Validators.compose([Validators.required])],
       file: ['', Validators.required],
-      imageUrl: ['', Validators.required]
+      imageUrl: ['', Validators.required],
     })
   }
   

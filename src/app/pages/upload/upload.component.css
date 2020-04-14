@@ -11,6 +11,9 @@
     background: white;
     margin: 10px 0;
 }   */
+h3 {
+    color: #000000;
+}
 input.invalid {
     border: 3px solid red;
     border-top: none;
@@ -80,7 +83,7 @@ input.invalid {
     .form-group {
       display: flex; }
       .form-group input {
-        width: 50%; }
+        width: 100%; }
         .form-group input:first-child {
           margin-right: 25px; }
     
