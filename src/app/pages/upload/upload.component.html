@@ -1,7 +1,4 @@
-<div class="dropzone">
-
-
-     <!-- <button type="button" class="btn btn-warning">Upload Image</button> -->
+<!-- <div class="dropzone">
      <div class="input-group mb-3">
         <div class="custom-file">
           <input type="file" (change)="upload($event)" class="custom-file-input" accept=".png,.jpg" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
@@ -12,4 +9,48 @@
         <div class="result" *ngIf="downloadURL | async; let uploadSrc">
             <a [href]="uploadSrc">You just uploaded this file!</a>
         </div>
+</div> -->
+<div class="wrapper" style="background-image: url('../../../assets/img/bg-registration-form-1.jpg');">
+  <div class="inner">
+      <div class="image-holder">
+          <img src="../../../assets/img/judeus-samson.jpg" alt="">
+      </div>
+      <form>
+          <h3>Registration Form</h3>
+          <div class="form-group">
+              <input type="text"  formControlName="firstName" placeholder="First Name" class="form-control">
+              <input type="text"  formControlName="lastName" placeholder="Last Name" class="form-control">
+          </div>
+          <div class="form-wrapper">
+              <input type="text"  formControlName="username" placeholder="Username" class="form-control">
+          </div>
+          <div class="form-wrapper">
+              <input type="text"  formControlName="email" placeholder="Email Address" class="form-control">
+          </div>
+          <div class="form-wrapper">
+              <select name="gender" formControlName="gender" id="gender" class="form-control">
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+              </select>
+          </div>
+          <div class="form-wrapper">
+              <select name="role" formControlName="role" id="role" class="form-control">
+                  <option value="" disabled selected>Role</option>
+                  <option value="admin">Administrator</option>
+                  <option value="author">Author</option>
+              </select>
+          </div>
+          <div class="form-wrapper">
+              <input type="password" formControlName="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="form-wrapper">
+              <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class="form-control">
+          </div>
+          <button>Register
+              <i class="zmdi zmdi-arrow-right"></i>
+          </button>
+      </form>
+  </div>
 </div>
