@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { GalleryService } from 'src/app/services/gallery.service';
 
 @Component({
   selector: 'app-upload',
@@ -20,7 +21,8 @@ export class UploadComponent implements OnInit {
   
   constructor(private afStorage: AngularFireStorage, 
               private afs: AngularFirestore,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private galleryService: GalleryService) { }
 
   
   ngOnInit(): void {
@@ -63,6 +65,19 @@ export class UploadComponent implements OnInit {
     if (this.uploadItem.valid) {
       //Todo: Send Data To FireBase
       console.log(this.uploadItem.value)
+      this.galleryService.addItem(this.uploadItem.value).then(() => {
+        alert('Success');
+        this.uploadItem.reset({
+          itemName: '',
+          category: '',
+          description: '',
+          price: '',
+          file: '',
+          imageUrl: ''
+        })
+      }).catch((err) => {
+        alert(err)
+      })
     } else {
       alert('Form Not Valid')
     }

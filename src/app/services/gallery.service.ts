@@ -32,10 +32,12 @@ export class GalleryService {
      this.galleryCollection.doc(id).valueChanges()
    }
 
+   // Add Item to the Collection
    addItem(item: IGallery) {
     return this.galleryCollection.add(item);
     }
    
+    // Remove Item From The Collection
      removeItem(id) {
        return this.galleryCollection.doc(id).delete();
      }
