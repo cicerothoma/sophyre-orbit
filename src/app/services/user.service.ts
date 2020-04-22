@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private afs: AngularFirestore) { 
 
-    this.usersCollection = this.afs.collection('users', ref => ref.orderBy('firstName', 'asc'))
+    this.usersCollection = this.afs.collection('users', ref => ref.orderBy('firstName', 'desc'))
 
 
     this.users = this.afs.collection('users').snapshotChanges().pipe(

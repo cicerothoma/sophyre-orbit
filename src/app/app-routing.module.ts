@@ -10,6 +10,9 @@ import { AuthGuard } from './services/auth-guard.service';
 import { UsersComponent } from './pages/users/users.component';
 import { UploadComponent } from './pages/upload/upload.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 const routes: Routes = [
@@ -18,6 +21,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '404', component: PageNotFoundComponent},
   {path: 'gallery', component: GalleryComponent},
+  {path: 'services', component: ServicesComponent},
+  {path: 'contact-us', component: ContactUsComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'admin', component: AdminComponent, canActivate:[AuthGuard], canActivateChild: [AuthGuard], children: [
     {path: 'users', component: UsersComponent},
     {path: 'users/:id', component: UserDetailsComponent},

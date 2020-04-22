@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   user = null;
-
+  userId: string;
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
   login(email, password) {
     this.afAuth.signInWithEmailAndPassword(email, password)
@@ -26,6 +26,12 @@ export class AuthService {
         console.log(res.user.uid);
       })
       .catch((err) => console.log(err));
+  }
+  getUserId() {
+    this.afAuth.user.subscribe((user) => {
+      this.userId = user.uid;
+    })
+
   }
 
   logout() {

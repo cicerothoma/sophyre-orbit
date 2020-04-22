@@ -23,6 +23,9 @@ import { UploadComponent } from './pages/upload/upload.component';
 import { UsersComponent } from './pages/users/users.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
     UploadComponent,
     UsersComponent,
     EditUserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ServicesComponent,
+    AboutComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
