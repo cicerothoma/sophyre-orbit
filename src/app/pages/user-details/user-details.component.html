@@ -1,1 +1,12 @@
-<p>user-details works!</p>
+ <div *ngIf="userObject" class="card"> 
+    <!-- <img src="../../../assets/img/ussama-azam-fine.jpg" class="card-img-top"> -->
+     <div class="card-body">
+        <h4 class="card-title">{{userObject.firstName | titlecase}} {{userObject.lastName | titlecase}}</h4>
+        <p class="card-text">{{userObject.username | titlecase}}</p>
+        <p class="card-text">{{userObject.email | titlecase}}</p>
+        <p class="card-text">{{userObject.gender | titlecase}}</p>
+        <p class="card-text">{{userObject.role | titlecase}}</p>
+        <!-- <a href="#"  class="btn btn-primary btn-md">View Detail</a>
+        <a href="#" class="btn btn-success btn-md">Buy</a> -->
+    </div>
+</div> 

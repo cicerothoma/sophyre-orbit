@@ -13,6 +13,7 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutComponent } from './pages/about/about.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path: 'users/:id', component: UserDetailsComponent},
     {path: 'upload', component: UploadComponent},
     {path: 'sign-up', component: SignupComponent},
+    {path: 'messages', component: MessagesComponent}
   ]},
   {path: '**', redirectTo: '/404', pathMatch: 'full'}
 ];
