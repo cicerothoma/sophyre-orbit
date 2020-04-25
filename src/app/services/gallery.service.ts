@@ -13,7 +13,7 @@ export class GalleryService {
   constructor(private afs: AngularFirestore) {
     this.galleryCollection = afs.collection('gallery');
 
-    this.gallery = this.afs.collection('users').snapshotChanges().pipe(
+    this.gallery = this.afs.collection('gallery').snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as IGallery;
         const id = a.payload.doc.id;

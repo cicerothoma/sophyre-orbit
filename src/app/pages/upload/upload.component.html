@@ -40,7 +40,7 @@
               <input type="file" (change)="upload($event)" formControlName="file" class="form-control">
               <progress max="100" [value]="(uploadPercent | async)"></progress>
           </div>
-          <button type="button" (click)="submitForm()">Upload</button>
+          <button type="button" [disabled]="uploadItem.invalid" (click)="submitForm()">Upload</button>
       </form>
   </div>
 </div>

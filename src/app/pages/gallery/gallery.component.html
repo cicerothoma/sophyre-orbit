@@ -1,12 +1,13 @@
-<p>gallery works!</p>
-
-<!-- <div class="card"> -->
-    <!-- <img src="../../../assets/img/ussama-azam-fine.jpg" class="card-img-top"> -->
-    <!-- <div class="card-body">
-        <h4 class="card-title">Item Title</h4>
-        <p class="card-text">Item Description</p>
-        <p class="card-text">Item Price</p>
-        <a href="#" class="btn btn-primary btn-md">View Detail</a>
-        <a href="#" class="btn btn-success btn-md">Buy</a>
+<div *ngFor="let item of items">
+    <div class="card" style="width: 18rem;">
+        <img [src]="item.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.itemName}}</h5>
+          <p class="card-text">{{item.category}}</p>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">{{item.price}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
     </div>
-</div> -->
+</div>
+

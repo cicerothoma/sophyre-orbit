@@ -59,10 +59,10 @@
 .twitter {
     color: #00aced;
 }
-.telegram {
-    color: #563d7c;
+.whatsapp {
+    color: #4cc71c;
 }
-.facebook:hover, .instagram:hover, .twitter:hover, .telegram:hover{
+.facebook:hover, .instagram:hover, .twitter:hover, .whatsapp:hover{
     color: #d5d5d5;
 }
 

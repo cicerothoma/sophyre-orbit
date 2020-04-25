@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faBold } from '@fortawesome/free-solid-svg-icons';
 import { faCube } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+
 
 
 @Component({
@@ -20,7 +22,7 @@ export class HomeComponent implements OnInit {
   faFacebook = faFacebook;
   faInstagram = faInstagram;
   faTwitter = faTwitter;
-  faTelegram = faTelegram;
+  faWhatsapp = faWhatsappSquare;
   
   constructor() { }
   
